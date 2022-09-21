@@ -15,19 +15,17 @@ body{
 
     border:1px solid #ccc;
 
+    position: relative;
+
     overflow-y:scroll;
 
-    position: relative;
 }
 
 .navbar{
     background-color:steelblue;
     color:#fff;
 
-    padding:10px;
-
     position:sticky;
-
     left:0;
     top:0;
 
@@ -69,8 +67,7 @@ body{
     padding-top:100px;
 
     z-index:2;
-/* 
-    display:none; */
+/* display:none; */
 
 }
 
@@ -84,6 +81,8 @@ body{
     top:10px;
 
     cursor:pointer;
+    transition: color 0.3s;
+
 }
 
 .btn-close:hover{
@@ -104,6 +103,7 @@ body{
     width:100%;
     object-fit:cover;
 }
+
 
 .row .col{
     width:10%;
