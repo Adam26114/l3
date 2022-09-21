@@ -39,3 +39,5 @@ document,addEventListener('click',function(e){
         getmodal.style.display = "none"
     }
 })
+
+// 21LB
