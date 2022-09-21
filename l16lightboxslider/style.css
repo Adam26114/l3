@@ -65,10 +65,26 @@ body{
     padding-top:100px;
 }
 
+.btn-close{
+    color:#aaa;
+    font-size:40px;
+    font-weight:bold;
+
+    position:fixed;
+    right:30px;
+    top:10px;
+
+    cursor:pointer;
+}
+
+.btn-close:hover{
+    color:#ddd;
+}
+
 .modal-content{
     width:40%;
 
-    background-color:#f4f4f4;
+    /* background-color:#f4f4f4; */
 
     margin:auto;
 }
@@ -76,4 +92,38 @@ body{
 .modal-content .view img{
     width:100%;
     object-fit:cover;
+}
+
+.row .col{
+    width:10%;
+}
+
+.row .col img{
+    width:100%;
+    
+    cursor:pointer;
+}
+
+.view{
+    display:none;
+}
+
+.caption-container{
+    width:100%;
+
+    color:#f4f4f4;
+
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.noactive{
+    opacity:.5;
+
+    transition:opacity .3s;
+}
+
+.noactive:hover,.active{
+    opacity:1;
 }
