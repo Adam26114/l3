@@ -22,7 +22,7 @@ for(var i = 0 ; i < getimgs.length;i++){
     // getimgs[i].addEventListener('click',showmodal);
 
     getimgs[i].addEventListener('click',function(){
-        // showmodal();
+        showmodal();
 
         // console.log(e.target.alt);
         // console.log(this.alt);
@@ -32,7 +32,7 @@ for(var i = 0 ; i < getimgs.length;i++){
         // console.log(findids);
         // console.log(findids.length-1);
 
-        curidx = findids[findids.length-1];
+        curidx = Number(findids[findids.length-1]);
         console.log(curidx);
         console.log(typeof curidx);
 
