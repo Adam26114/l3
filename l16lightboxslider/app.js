@@ -33,8 +33,8 @@ for(var i = 0 ; i < getimgs.length;i++){
         // console.log(findids.length-1);
 
         curidx = Number(findids[findids.length-1]);
-        console.log(curidx);
-        console.log(typeof curidx);
+        // console.log(curidx);
+        // console.log(typeof curidx);
 
         slideshow(curidx);
 
@@ -129,4 +129,4 @@ function slideshow(num){
 
 }
 
-// 21LB
+// 26LB
