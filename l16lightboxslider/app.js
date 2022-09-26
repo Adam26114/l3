@@ -64,9 +64,24 @@ getprevbtn.addEventListener('click',function(){
 
 
 function slideshow(num){
+    // console.log(num);
     
-    console.log(num);
+    
+    if(curidx > getviews.length){
+        num = 1;
+        curidx = 1;
+    }
+    
+    if(num < 1){
+        num = getviews.length;
+        curidx = getviews.length;
+    }
 
+    // console.log("this is curidx = " , curidx);
+    // console.log("this is num = " , num);
+
+
+    getcounter.textContent = `${curidx} / ${getviews.length}`
 }
 
 // 21LB
