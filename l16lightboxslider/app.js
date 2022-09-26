@@ -6,11 +6,13 @@ var getmodal = document.querySelector('.modal');
 var getbtnclose = document.querySelector('.btn-close');
 var getviews = document.getElementsByClassName('view');
 // console.log(getviews); // HTML Collection
-var getprev = document.querySelector('.prev');
-var getnext = document.querySelector('.next');
+var getprevbtn = document.querySelector('.prev');
+var getnextbtn = document.querySelector('.next');
 var getcounter = document.querySelector('.counter');
 var getcaption = document.querySelector('.caption');
 var getnoactive = document.getElementsByClassName('noactive');
+
+var curidx = 1;
 
 // console.log(getnoactive); // HTML Collection
 
@@ -38,6 +40,33 @@ document,addEventListener('click',function(e){
     if(e.target === getmodal){
         getmodal.style.display = "none"
     }
-})
+});
+
+
+function currentview(num){
+
+    slideshow(num);
+
+}
+
+getnextbtn.addEventListener('click',function(){
+    // console.log('i am next');
+
+    slideshow(curidx += 1);
+
+});
+
+getprevbtn.addEventListener('click',function(){
+    // console.log('i am prev');
+    
+    slideshow(curidx -= 1);
+});
+
+
+function slideshow(num){
+    
+    console.log(num);
+
+}
 
 // 21LB
