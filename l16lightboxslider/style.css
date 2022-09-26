@@ -11,8 +11,8 @@ body{
 
 .container{
     width:30%;
-    height:500px;
-    /* height:60%; */
+    /* height:500px; */
+    height:50%;
 
     border:1px solid #ccc;
 
@@ -39,6 +39,8 @@ body{
     padding:0;
     margin:0;
 }
+
+
 
 .row{
     display:flex;

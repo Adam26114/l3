@@ -10,16 +10,39 @@ var getprevbtn = document.querySelector('.prev');
 var getnextbtn = document.querySelector('.next');
 var getcounter = document.querySelector('.counter');
 var getcaption = document.querySelector('.caption');
-var getnoactive = document.getElementsByClassName('noactive');
+var getnoactives = document.getElementsByClassName('noactive');
 
 var curidx = 1;
 
-// console.log(getnoactive); // HTML Collection
+// console.log(getnoactives); // HTML Collection
 
 for(var i = 0 ; i < getimgs.length;i++){
     // console.log( getimgs[i]);
 
-    getimgs[i].addEventListener('click',showmodal);
+    // getimgs[i].addEventListener('click',showmodal);
+
+    getimgs[i].addEventListener('click',function(){
+        // showmodal();
+
+        // console.log(e.target.alt);
+        // console.log(this.alt);
+
+        const findids = this.alt.split('').filter(rmspace=>rmspace.trim() !== '');
+
+        // console.log(findids);
+        // console.log(findids.length-1);
+
+        curidx = findids[findids.length-1];
+        console.log(curidx);
+        console.log(typeof curidx);
+
+        slideshow(curidx);
+
+
+
+        // curidx = 1;
+        // console.log(curidx);
+    });
 }
 
 function showmodal(){
@@ -63,9 +86,23 @@ getprevbtn.addEventListener('click',function(){
 });
 
 
+// slideshow(curidx);
+
 function slideshow(num){
     // console.log(num);
     
+    var x;
+
+    for( x = 0 ; x < getviews.length; x++){
+        getviews[x].style.display = 'none';
+    }
+
+    for(x = 0 ; x < getnoactives.length ; x++){
+        // getnoactives[x].classList.remove("active");
+
+        getnoactives[x].className = getnoactives[x].className.replace(" active","");
+    }
+
     
     if(curidx > getviews.length){
         num = 1;
@@ -82,6 +119,14 @@ function slideshow(num){
 
 
     getcounter.textContent = `${curidx} / ${getviews.length}`
+
+        //   1 - 1 = 0
+    getviews[num-1].style.display = 'block';
+
+    getnoactives[num-1].className += " active";
+
+    getcaption.innerText = getnoactives[num-1].alt;
+
 }
 
 // 21LB
