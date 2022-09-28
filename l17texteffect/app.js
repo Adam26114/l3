@@ -31,7 +31,7 @@ function* generator(){
 
 }
 
-const testnumber = generator();
+// const testnumber = generator();
 
 // console.log(testnumber.next()); //{value: 0, done: false}
 // console.log(testnumber.next().value); //1
@@ -45,42 +45,61 @@ const testnumber = generator();
 
 
 
-function showword(word){
-    // let x = 0;
+function showwords(word){
+    let x = 0;
 
     // // console.log(word);
 
-    // gettxtani.innerHTML = "";
+    gettxtani.innerHTML = "";
+    gettxtani.classList.add(colors[languages.indexOf(word)]);
+
 
     // // gettxtani.innerHTML = word;
     // // gettxtani.innerHTML += word[0];
     // // gettxtani.innerHTML += word[1];
 
-    // let showintval = setInterval(function(){
+    let showintval = setInterval(function(){
 
-    //     gettxtani.innerHTML  = word[0];
-    //     gettxtani.innerHTML += word[1];
+        // gettxtani.innerHTML  = word[0];
+        // gettxtani.innerHTML += word[1];
 
-    //     if(x >= word.lenght){
-    //         clearInterval(showintval);
-    //     }else{
-    //         gettxtani.innerHTML += word[x];
-    //     }
+        if(x >= word.lenght){
+            clearInterval(showintval);
+            deletoword();
+        }else{
+            showwords(languages[gen.next().value]);
+            gettxtani.innerHTML += word[x];
+        }
 
-    // },500);
+    },500);
 }
 
 function deletoword(){
+    let getword = gettxtani.innerHTML;
+    // console.log(getword);
 
+    let getlastidx = getword.length - 1;
+    // console.log(getlastidx);
+
+    let delintval = setInterval(function(){
+
+        if(getlastidx >= 0){
+            gettxtani.innerHTML = gettxtani.innerHTML.substring(0,gettxtani.innerHTML.length - 1)
+            getlastidx--;
+        }else{
+            clearInterval(delintval)
+        }
+
+    });
 }
 
 
 let gen = generator();
-showword(languages[gen.next().value]);//Nodejs
-// showword(languages[gen.next().value]);//Reactjs
-// showword(languages[gen.next().value]);//Vuejs
-// showword(languages[gen.next().value]);//Laravel
-// showword(languages[gen.next().value]);//Nodejs
+showwords(languages[gen.next().value]);//Nodejs
+// showwords(languages[gen.next().value]);//Reactjs
+// showwords(languages[gen.next().value]);//Vuejs
+// showwords(languages[gen.next().value]);//Laravel
+// showwords(languages[gen.next().value]);//Nodejs
 
 
 
