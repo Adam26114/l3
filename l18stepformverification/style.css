@@ -22,6 +22,8 @@ body{
 
 .dotbox{
     width:10%;
+
+    padding-top:75px;
 }
 
 .dot{
@@ -37,6 +39,11 @@ body{
 
 .dot.active{
     opacity:1;
+}
+
+
+.dot.done{
+    background-color:green;
 }
 
 #form{
