@@ -24,13 +24,13 @@
             <div class="page">
                 <label for="email">Security :</label>
                 <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email" autocomplete="off"/>
-                <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" autocomplete="off"/>
+                <input type="password" name="password" id="password" class="form-control" placeholder="Enter Password" autocomplete="on"/>
             </div>
          
             <div class="page">
                 <label for="email">Personal Info :</label>
-                <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Enter Firstname" autocomplete="off"/>
-                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Enter Lastname" autocomplete="off"/>
+                <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Enter Firstname" autocomplete="on"/>
+                <input type="text" name="lastname" id="lastname" class="form-control" placeholder="Enter Lastname" autocomplete="on"/>
             </div>
          
             <div class="page">
@@ -40,8 +40,8 @@
     
             <div class="page">
                 <label for="email">Contact Info :</label>
-                <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter Phone Number" autocomplete="off"/>
-                <input type="text" name="address" id="address" class="form-control" placeholder="Enter Detail Address" autocomplete="off"/>
+                <input type="text" name="phone" id="phone" class="form-control" placeholder="Enter Phone Number" autocomplete="on"/>
+                <input type="text" name="address" id="address" class="form-control" placeholder="Enter Detail Address" autocomplete="on"/>
             </div>
     
     
@@ -50,6 +50,9 @@
                 <button type="button" id="nextbtn" class="btn" onclick="gonow(1)">Next</button>
             </div>
         </form>
+
+        <div id="result-container"></div>
+
     </div>
 
 
