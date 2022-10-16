@@ -97,6 +97,9 @@ getdisplay[idx].style.display = "block"
 
 getmodebtn.onclick = function(){
     
+    reloadagain();
+    [hours,minutes,seconds,milliseconds] = [0,0,0,0];
+
     getdisplay[idx].style.display = "none";
     
     idx++;
@@ -127,6 +130,12 @@ getpausebtn.onclick = function(){
 
 getresetbtn.onclick = function(){
 
+    reloadagain();
+
+}
+
+function reloadagain(){
+    
     if(idx === 0 ){
         clearInterval(setivdisplay);
         [hours,minutes,seconds,milliseconds] = [0,0,0,0];
@@ -139,8 +148,6 @@ getresetbtn.onclick = function(){
         getdlpmlsec.innerHTML = milliseconds;
         getdlpsec.innerHTML = seconds;
     }
-
-
 
 }
 
@@ -210,3 +217,5 @@ function showdisplay(){
     
     }
 }
+
+// 17SW
