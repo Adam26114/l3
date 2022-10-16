@@ -13,6 +13,8 @@ body{
     border-radius:10px;
     box-shadow:0 5px 10px 10px rgba(0,0,0,0.3);
     text-align:center;
+
+    position: relative;
 }
 
 h2{
@@ -27,6 +29,8 @@ h2{
     padding:10px;
     margin:10px 0;
     border-radius:10px;
+
+    display:none;
 }
 
 .control{
@@ -52,3 +56,8 @@ h2{
     transform:scale(.97);
 }
 
+.mode-btn{
+    position:absolute;
+    right:0px;
+    top:14px;
+}
