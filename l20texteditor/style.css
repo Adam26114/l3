@@ -31,3 +31,16 @@ textarea{
     overflow-y:scroll;
 }
 
+
+.divarea{
+    width:100%;
+    min-height:200px;
+    border:1px solid steelblue;
+    padding:10px;
+    resize:vertical;
+    overflow-y:scroll;
+}
+
+.divarea:focus{
+    outline:none;
+}

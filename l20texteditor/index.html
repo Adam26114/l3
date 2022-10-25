@@ -20,16 +20,50 @@
         <div class="row">
 
             <div class="col-md-12">
-                <button type="button" class="btn btn-outline-secondary rounded-0" onclick="boldfun()" title="Bold Text">Bold</button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" onclick="italicfun()" title="Italic Text">Italic</button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" onclick="underlinefun()" title="Underline Text">Underline</button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" onclick="lalgfun()" title="Left Align"><i class="fas fa-align-left"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" onclick="calgfun()" title="Center Align"><i class="fas fa-align-center"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" onclick="ralgfun()" title="Right Align"><i class="fas fa-align-right"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Bold Text">Bold</button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Italic Text">Italic</button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Underline Text">Underline</button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="LineThrough Text">LineThrough</button>
+
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Left Align"><i class="fas fa-align-left"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Center Align"><i class="fas fa-align-center"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Right Align"><i class="fas fa-align-right"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Align justify"><i class="fas fa-align-justify"></i></button>
+
                 <button type="button" class="btn btn-outline-secondary rounded-0" onclick="upcasefun()" title="Uppercase Text">Uppercase</button>
                 <button type="button" class="btn btn-outline-secondary rounded-0" onclick="lwcasefun()" title="Lowercase Text">Lowercase</button>
                 <button type="button" class="btn btn-outline-secondary rounded-0" onclick="capcasefun()" title="Capitalize Text">Capitalize Case</button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" onclick="clearfun()" title="Clear Text">Clear</button>
+
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Order List"><i class="fas fa-list-ol"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Unrder List"><i class="fas fa-list-ul"></i></button>
+
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Unrder List"><i class="fas fa-check"></i></button>
+                
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Backspace"><i class="fas fa-backspace"></i></button>
+                
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="copy"><i class="fas fa-copy"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Cut"><i class="fas fa-cut"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Paste"><i class="fas fa-paste"></i></button>
+                
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Undo"><i class="fas fa-undo"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Redo"><i class="fas fa-redo"></i></button>
+                
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Link"><i class="fas fa-link"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Unlink"><i class="fas fa-unlink"></i></button>
+                
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Image"><i class="fas fa-image"></i></button>
+                
+                <select name="txtcolor" id="txtcolor" class="btn btn-outline-secondary rounded-0">
+                    <option value="black" selected>Black</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="Blue">Blue</option>
+                </select>
+
+
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Clear Text">Clear</button>
+
+
             </div>
 
         </div>
@@ -40,7 +74,10 @@
                 <form action="" method="">
 
                     <div class="form-group">
-                        <textarea name="arti" id="textarea" class="form-control shadow" placeholder="Write Something..." rows="15"></textarea>
+                        <!-- <textarea name="arti" id="textarea" class="form-control shadow" placeholder="Write Something..." rows="15"></textarea> -->
+
+                        <div id="divarea" class="divarea" contenteditable="true" spellcheck="false"></div>
+
                     </div>
 
                     <div class="text-end">

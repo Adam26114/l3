@@ -1,28 +1,28 @@
 var gettxtarea = document.getElementById('textarea')
 
-function boldfun(){
-    gettxtarea.style.fontWeight = "bold";
-}
+// function boldfun(){
+//     gettxtarea.style.fontWeight = "bold";
+// }
 
-function italicfun(){
-    gettxtarea.style.fontStyle = "italic";
-}
+// function italicfun(){
+//     gettxtarea.style.fontStyle = "italic";
+// }
 
-function underlinefun(){
-    gettxtarea.style.textDecoration = "underline"
-}
+// function underlinefun(){
+//     gettxtarea.style.textDecoration = "underline"
+// }
 
-function lalgfun(){
-    gettxtarea.style.textAlign = "left"
-}
+// function lalgfun(){
+//     gettxtarea.style.textAlign = "left"
+// }
 
-function calgfun(){
-    gettxtarea.style.textAlign = "center"
-}
+// function calgfun(){
+//     gettxtarea.style.textAlign = "center"
+// }
 
-function ralgfun(){
-    gettxtarea.style.textAlign = "right"
-}
+// function ralgfun(){
+//     gettxtarea.style.textAlign = "right"
+// }
 
 function upcasefun(){
     gettxtarea.style.textTransform = "uppercase"
@@ -36,11 +36,11 @@ function capcasefun(){
     gettxtarea.style.textTransform = "capitalize"
 }
 
-function clearfun(){
-    gettxtarea.style.fontWeight = "normal";
-    gettxtarea.style.fontStyle = "normal";
-    gettxtarea.style.textDecoration = "none"
-    gettxtarea.style.textAlign = "left"
-    gettxtarea.style.textTransform = "none"
-    gettxtarea.value = "";
-}
+// function clearfun(){
+//     gettxtarea.style.fontWeight = "normal";
+//     gettxtarea.style.fontStyle = "normal";
+//     gettxtarea.style.textDecoration = "none"
+//     gettxtarea.style.textAlign = "left"
+//     gettxtarea.style.textTransform = "none"
+//     gettxtarea.value = "";
+// }
