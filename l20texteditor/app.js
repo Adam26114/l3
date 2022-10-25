@@ -2,6 +2,7 @@ var gettxtarea = document.getElementById('textarea');
 var getdivarea = document.getElementById('divarea');
 
 getdivarea.contentEditable = true;
+getdivarea.spellcheck = false;
 
 // function boldfun(){
 //     gettxtarea.style.fontWeight = "bold";
