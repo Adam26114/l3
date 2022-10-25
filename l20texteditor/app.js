@@ -1,4 +1,7 @@
-var gettxtarea = document.getElementById('textarea')
+var gettxtarea = document.getElementById('textarea');
+var getdivarea = document.getElementById('divarea');
+
+getdivarea.contentEditable = true;
 
 // function boldfun(){
 //     gettxtarea.style.fontWeight = "bold";
@@ -44,3 +47,9 @@ function capcasefun(){
 //     gettxtarea.style.textTransform = "none"
 //     gettxtarea.value = "";
 // }
+
+
+// execCommand(aCommandName,aShowDefaultUI,aValueArgument);
+// aShowDefaultUI 
+// true
+// false
