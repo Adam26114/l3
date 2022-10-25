@@ -4,6 +4,18 @@ var getdivarea = document.getElementById('divarea');
 getdivarea.contentEditable = true;
 getdivarea.spellcheck = false;
 
+var getbtns = document.querySelectorAll('.btn');
+// console.log(getbtns);//NodeList
+
+getbtns.forEach(function(getbtn){
+    getbtn.addEventListener('click',function(){
+        // var getcommand = getbtn.getAttribute('data-command')
+        var getcommand = getbtn.dataset['command'];
+        console.log(getcommand);
+    });
+});
+
+
 // function boldfun(){
 //     gettxtarea.style.fontWeight = "bold";
 // }
