@@ -13,7 +13,7 @@ getbtns.forEach(function(getbtn){
         var getcommand = getbtn.dataset['command'];
         // console.log(getcommand);
 
-        document.execCommand(getcommand,false,null)
+        document.execCommand(getcommand,false,null);
     });
 });
 
