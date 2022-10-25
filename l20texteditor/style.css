@@ -41,6 +41,7 @@ textarea{
     resize:vertical;
     border-radius:5px;
     overflow-y:scroll;
+    text-align:justify;
 }
 
 .divarea:focus{

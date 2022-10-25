@@ -11,7 +11,9 @@ getbtns.forEach(function(getbtn){
     getbtn.addEventListener('click',function(){
         // var getcommand = getbtn.getAttribute('data-command')
         var getcommand = getbtn.dataset['command'];
-        console.log(getcommand);
+        // console.log(getcommand);
+
+        document.execCommand(getcommand,false,)
     });
 });
 
