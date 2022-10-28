@@ -25,43 +25,42 @@
                 <button type="button" class="btn btn-outline-secondary rounded-0" title="Underline Text" data-command="underline"><i class="fas fa-underline"></i></button>
                 <button type="button" class="btn btn-outline-secondary rounded-0" title="LineThrough Text" data-command="strikeThrough"><i class="fas fa-strikethrough"></i></button>
 
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Left Align"><i class="fas fa-align-left"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Center Align"><i class="fas fa-align-center"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Right Align"><i class="fas fa-align-right"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Align justify"><i class="fas fa-align-justify"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Left Align" data-command="justifyLeft"><i class="fas fa-align-left"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Center Align" data-command="justifyCenter"><i class="fas fa-align-center"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Right Align" data-command="justifyRight"><i class="fas fa-align-right"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Align justify" data-command="justifyFull"><i class="fas fa-align-justify"></i></button>
 
                 <button type="button" class="btn btn-outline-secondary rounded-0" onclick="upcasefun()" title="Uppercase Text">Uppercase</button>
                 <button type="button" class="btn btn-outline-secondary rounded-0" onclick="lwcasefun()" title="Lowercase Text">Lowercase</button>
                 <button type="button" class="btn btn-outline-secondary rounded-0" onclick="capcasefun()" title="Capitalize Text">Capitalize Case</button>
 
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Order List"><i class="fas fa-list-ol"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Unrder List"><i class="fas fa-list-ul"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Order List" data-command="insertOrderedList"><i class="fas fa-list-ol"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Unorder List" data-command="insertUnorderedList"><i class="fas fa-list-ul"></i></button>
 
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Unrder List"><i class="fas fa-check"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Select All" data-command="selectAll"><i class="fas fa-check"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Backspace" data-command="delete"><i class="fas fa-backspace"></i></button>
                 
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Backspace"><i class="fas fa-backspace"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="copy" data-command="copy"><i class="fas fa-copy"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Cut" data-command="cut"><i class="fas fa-cut"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Paste" data-command="paste"><i class="fas fa-paste"></i></button>
                 
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="copy"><i class="fas fa-copy"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Cut"><i class="fas fa-cut"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Paste"><i class="fas fa-paste"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Undo" data-command="undo"><i class="fas fa-undo"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Redo" data-command="redo"><i class="fas fa-redo"></i></button>
                 
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Undo"><i class="fas fa-undo"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Redo"><i class="fas fa-redo"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Link" data-command="createLink"><i class="fas fa-link"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Unlink" data-command="unlink"><i class="fas fa-unlink"></i></button>
                 
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Link"><i class="fas fa-link"></i></button>
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Unlink"><i class="fas fa-unlink"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Image" data-command="insertImage"><i class="fas fa-image"></i></button>
                 
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Image"><i class="fas fa-image"></i></button>
-                
-                <select name="txtcolor" id="txtcolor" class="btn btn-outline-secondary rounded-0">
-                    <option value="black" selected>Black</option>
+                <select name="txtcolor" id="txtcolor" class="btn btn-outline-secondary rounded-0" data-command="foreColor">
+                    <option value="black">Black</option>
                     <option value="red">Red</option>
                     <option value="green">Green</option>
                     <option value="Blue">Blue</option>
                 </select>
 
 
-                <button type="button" class="btn btn-outline-secondary rounded-0" title="Clear Text">Clear</button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Clear Text" data-command="cleartext">Clear</button>
 
 
             </div>
@@ -76,7 +75,9 @@
                     <div class="form-group">
                         <!-- <textarea name="arti" id="textarea" class="form-control shadow" placeholder="Write Something..." rows="15"></textarea> -->
 
-                        <div id="divarea" class="divarea" spellcheck="false"></div>
+                        <div id="divarea" class="divarea" spellcheck="false">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </div>
 
                     </div>
 

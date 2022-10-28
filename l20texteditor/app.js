@@ -13,7 +13,22 @@ getbtns.forEach(function(getbtn){
         var getcommand = getbtn.dataset['command'];
         // console.log(getcommand);
 
-        document.execCommand(getcommand,false,null);
+        if(getcommand === "cleartext"){
+            getdivarea.innerHTML = "";
+        }else if(getcommand === "createLink" || getcommand === "insertImage"){
+            let geturl = prompt("Enter your website link","https://");
+            document.execCommand(getcommand,false,geturl);
+        }else if (getcommand === "foreColor") {
+            // console.log(getbtn.value);
+            document.execCommand(getcommand, false, getbtn.value);
+        }else if(getcommand === "paste"){
+            navigator.clipboard.readText().then(function(cliptext){
+                console.log(cliptext);
+                getdivarea.innerHTML += cliptext;
+            });
+        }else{
+            document.execCommand(getcommand,false,null);
+        }
     });
 });
 

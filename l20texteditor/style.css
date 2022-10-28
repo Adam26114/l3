@@ -38,10 +38,12 @@ textarea{
     max-height:400px;
     border:1px solid steelblue;
     padding:10px;
-    resize:vertical;
     border-radius:5px;
-    overflow-y:scroll;
     text-align:justify;
+    
+    resize:vertical;
+    
+    overflow-y:scroll;
 }
 
 .divarea:focus{
