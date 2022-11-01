@@ -23,6 +23,8 @@ getbtns.forEach(function(getbtn){
             document.execCommand(getcommand, false, getbtn.value);
         }else if (getcommand === "backColor"){
             document.execCommand(getcommand, false, getbtn.value);
+        }else if (getcommand === "fontName"){
+            document.execCommand(getcommand, false, getbtn.value);
         }else if (getcommand === "paste"){
             navigator.clipboard.readText().then(function(cliptext){
                 console.log(cliptext);

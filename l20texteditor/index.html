@@ -34,11 +34,17 @@
                 <button type="button" class="btn btn-outline-secondary rounded-0" onclick="lwcasefun()" title="Lowercase Text">Lowercase</button>
                 <button type="button" class="btn btn-outline-secondary rounded-0" onclick="capcasefun()" title="Capitalize Text">Capitalize Case</button>
 
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Subscript" data-command="subscript"><i class="fas fa-subscript"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Superscript" data-command="superscript"><i class="fas fa-superscript"></i></button>
+                
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="horizontal Ruler" data-command="insertHorizontalRule"><i class="fas fa-ruler"></i></button>
+
                 <button type="button" class="btn btn-outline-secondary rounded-0" title="Order List" data-command="insertOrderedList"><i class="fas fa-list-ol"></i></button>
                 <button type="button" class="btn btn-outline-secondary rounded-0" title="Unorder List" data-command="insertUnorderedList"><i class="fas fa-list-ul"></i></button>
 
                 <button type="button" class="btn btn-outline-secondary rounded-0" title="Select All" data-command="selectAll"><i class="fas fa-check"></i></button>
                 <button type="button" class="btn btn-outline-secondary rounded-0" title="Backspace" data-command="delete"><i class="fas fa-backspace"></i></button>
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Delete" data-command="forwardDelete"><i class="fas fa-trash"></i></button>
                 
                 <button type="button" class="btn btn-outline-secondary rounded-0" title="copy" data-command="copy"><i class="fas fa-copy"></i></button>
                 <button type="button" class="btn btn-outline-secondary rounded-0" title="Cut" data-command="cut"><i class="fas fa-cut"></i></button>
@@ -67,10 +73,18 @@
                     <option value="green">Green</option>
                     <option value="Blue">Blue</option>
                 </select>
+                
+                <select name="fntname" id="fntname" class="btn btn-outline-secondary rounded-0" data-command="fontName">
+                    <option value="arial">Arial</option>
+                    <option value="century">Century</option>
+                    <option value="sans-serift">Sans-Serift</option>
+                    <option value="time new romen">Time-New-Romen</option>
+                </select>
 
 
                 <button type="button" class="btn btn-outline-secondary rounded-0" title="Clear Text" data-command="cleartext">Clear</button>
-
+                
+                <button type="button" class="btn btn-outline-secondary rounded-0" title="Remove Format" data-command="removeFormat">Remove Format</button>
 
             </div>
 
@@ -108,3 +122,5 @@
     <script src="./app.js" type="text/javascript"></script>
 </body>
 </html>
+
+<!-- 1TE -->
