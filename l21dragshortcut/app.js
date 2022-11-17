@@ -4,7 +4,7 @@ const getbtns = document.querySelector('.btns');
 dragme(getbox);
 
 getbox.addEventListener('click',function(){
-    getbtns.    classList.toggle('show');
+    getbtns.classList.toggle('show');
 });
 
 function dragme(getele){
