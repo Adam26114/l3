@@ -4,8 +4,17 @@ const getbtns = document.querySelector('.btns');
 dragme(getbox);
 
 getbox.addEventListener('click',function(){
-    getbtns.classList.toggle('show');
+    // getbtns.classList.toggle('show');
+
+    getbtns.classList.add('show');
 });
+
+getbox.addEventListener('dblclick',function(){
+    // getbtns.classList.toggle('show');
+
+    getbtns.classList.remove('show');
+});
+
 
 function dragme(getele){
     console.log(getele);
