@@ -23,6 +23,8 @@ body{
 
     position: absolute;
     cursor: move;
+
+    z-index:100;
 }
 
 #boxtitle{

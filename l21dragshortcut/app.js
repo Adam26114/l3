@@ -1,5 +1,6 @@
 const getbox = document.querySelector('.box');
 const getbtns = document.querySelector('.btns');
+const getboxtitles = document.getElementById('boxtitle');
 
 dragme(getbox);
 
@@ -17,11 +18,18 @@ getbox.addEventListener('dblclick',function(){
 
 
 function dragme(getele){
-    console.log(getele);
+    // console.log(getele);
 
     var getcx,getcy,setcx,setcy;
 
+    //design1 
     getele.onmousedown = getmousedown;
+
+    // design 2
+     if(getele){
+        // console.log(getboxtitles);
+        getboxtitles.onmousedown = getmousedown;
+     }
 
     function getmousedown(e){
         // console.log('i am working');
@@ -36,7 +44,9 @@ function dragme(getele){
         document.onmouseup = stopdragme;
 
 
-        console.log('step 1',getcx,getcy);
+        // console.log('step 1',getcx,getcy);
+
+        // getbtns.classList.remove('show');
 
     }
 
@@ -67,6 +77,8 @@ function dragme(getele){
         getele.style.top = (btntop - setcy)+"px";
 
         // console.log(btnleft-setcx,btntop-setcy);
+
+        getbtns.classList.remove('show');
     }
 
     function stopdragme(){
