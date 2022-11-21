@@ -8,13 +8,29 @@ getbox.addEventListener('click',function(){
     // getbtns.classList.toggle('show');
 
     getbtns.classList.add('show');
+    // console.log(e.target);
+
+    smallmenu(e.target);
+
 });
+
+function smallmenu(icobox){
+    console.log(icobox)
+    if(icobox.classList.contains('btn-icon')){
+        console.log("yes")
+    }else{
+        console.log('no')
+    }
+}
 
 getbox.addEventListener('dblclick',function(){
     // getbtns.classList.toggle('show');
 
     getbtns.classList.remove('show');
 });
+
+
+dragme(getbox);
 
 
 function dragme(getele){
@@ -86,3 +102,6 @@ function dragme(getele){
         document.onmouseup = null;
     }
 }
+
+
+// 21MM
