@@ -12,10 +12,11 @@
 
     <div class="container">
         <h1>Video Player</h1>
-        <video src="https://www.mediafire.com/file/17sma6i23q5f2cb/samplevideo1.mp4/file" id="videoscreen" class="videoscreen"></video>
+        <video src="samplevideo1.mp4" id="videoscreen" class="videoscreen"></video>
+        <!-- https://www.mediafire.com/file/17sma6i23q5f2cb/samplevideo1.mp4/file -->
         <!-- https://www.mediafire.com/file/1410g8dfz3h1bi5/samplevideo2.mp4/file -->
 
-        <div class="control">
+        <div class="controls">
             <button type="button" id="prev" class="ctrl-btn">
                 <i class="fas fa-backward"></i>
             </button>
@@ -30,6 +31,9 @@
             </button>
 
             <input type="range" name="progress" id="progress" class="progress" min="0" max="100" value="0"/>
+
+            <span id="fullscreen" class="fullscreen"><i id="fullscreen" class="fas fa-expand"></i></span>
+            <span id="displaytime" class="displaytime">00:00</span>
 
         </div>
     </div>
