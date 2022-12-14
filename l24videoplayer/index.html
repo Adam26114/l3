@@ -4,10 +4,35 @@
     <title>Email Box</title>
     <!-- fav icon -->
     <link href="https://cdn-icons-png.flaticon.com/512/5968/5968292.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="./style.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
+
+    <div class="container">
+        <h1>Video Player</h1>
+        <video src="https://www.mediafire.com/file/17sma6i23q5f2cb/samplevideo1.mp4/file" id="videoscreen" class="videoscreen"></video>
+        <!-- https://www.mediafire.com/file/1410g8dfz3h1bi5/samplevideo2.mp4/file -->
+
+        <div class="control">
+            <button type="button" id="prev" class="ctrl-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button type="button" id="play" class="ctrl-btn">
+                <i class="fas fa-play"></i>
+            </button>
+            <button type="button" id="next" class="ctrl-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+            <button type="button" id="stop" class="ctrl-btn">
+                <i class="fas fa-stop"></i>
+            </button>
+
+            <input type="range" name="progress" id="progress" class="progress" min="0" max="100" value="0"/>
+
+        </div>
+    </div>
 
     
     <script src="./app.js" type="text/javascript"></script>
