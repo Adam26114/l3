@@ -102,3 +102,5 @@ playbtn.addEventListener('click',playvdo);
 nextbtn.addEventListener('click',nextvdo);
 prevbtn.addEventListener('click',previousvdo);
 getfullscreen.addEventListener('click',openfullscreen);
+
+// 20VD
