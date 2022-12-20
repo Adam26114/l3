@@ -38,4 +38,44 @@ function pausevdo(){
     getvideoscreen.pasue();
 }
 
+function playpausevdo(){
+    //pasued keyword came from video api
+    if(getvideoscreen.paused){
+        // getvideoscreen.play();
+        playvdo();
+    }else{
+        // getvideoscreen.pause();
+        pausevdo();
+    }
+}
+
+function nextvdo(){
+    curridx++;
+
+    if(curridx > videos.length){
+        curridx = 0;
+    }
+
+    // console.log(curridx);
+
+    loadvideo(videos[curridx]);
+
+    playvdo();
+}
+
+function previousvdo(){
+    curridx -= 1 ;
+
+    if(curridx > 0){
+        curridx = videos.length - 1;
+    }
+
+    // console.log(curridx);
+
+    loadvideo(videos[curridx]);
+    playvdo();
+}
+
 playbtn.addEventListener('click',playvdo);
+nextbtn.addEventListener('click',nextvdo);
+prevbtn.addEventListener('click',previousvdo);
