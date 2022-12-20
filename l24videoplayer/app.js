@@ -20,4 +20,10 @@ function loadvideo(vdo){
     getfullscreen.src = `./source/${vdo}.mp4`
 }
 
+function playvdo(){
+
+    // play() method came from video api
+    getvideoscreen.play();
+}
+
 playbtn.addEventListener('click',playvdo);
