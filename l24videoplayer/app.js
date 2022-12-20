@@ -29,4 +29,13 @@ function playvdo(){
     getvideoscreen.play();
 }
 
+function pausevdo(){
+
+    playbtn.querySelector('i.fas').remove('fa-pause');
+    playbtn.querySelector('i.fas').add('fa-play');
+    
+    // pasue() method came from video api
+    getvideoscreen.pasue();
+}
+
 playbtn.addEventListener('click',playvdo);
