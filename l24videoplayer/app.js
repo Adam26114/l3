@@ -14,8 +14,10 @@ const videos = ['simplevideo1','simplevideo2']
 
 let curridx = 0;
 
-loadvideo(videos[1]);
+loadvideo(videos[curridx]);
 
 function loadvideo(vdo){
     getfullscreen.src = `./source/${vdo}.mp4`
 }
+
+playbtn.addEventListener('click',playvdo);
