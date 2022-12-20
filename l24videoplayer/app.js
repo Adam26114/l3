@@ -22,6 +22,9 @@ function loadvideo(vdo){
 
 function playvdo(){
 
+    playbtn,querySelector('i.fas').classList.remove('fa-play');
+    playbtn,querySelector('i.fas').classList.add('fa-pause');
+
     // play() method came from video api
     getvideoscreen.play();
 }
