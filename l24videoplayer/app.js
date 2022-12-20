@@ -76,6 +76,29 @@ function previousvdo(){
     playvdo();
 }
 
+const getdoce = document.documentElement;
+
+function openfullscreen(){
+    if(getdoce.exitFullscreen){
+        getdoce.requestFullscreen();
+    }else if(getdoce.webkitRequestFullscreen){
+        getdoce.webkitRequestFullscreen();
+    }else if(getdoce.msRequestFullscreen){
+        getdoce.msRequestFullscreen();
+    }
+}
+
+function closefullscreen(){
+    if(document.exitFullscreen){
+        getdoce.exitFullscreen();
+    }else if(document.webkitExitFullscreen){
+        getdoce.webkitExitFullscreen();
+    }else if(document.msExitFullscreen){
+        getdoce.msExitFullscreen();
+    }
+}
+
 playbtn.addEventListener('click',playvdo);
 nextbtn.addEventListener('click',nextvdo);
 prevbtn.addEventListener('click',previousvdo);
+getfullscreen.addEventListener('click',openfullscreen);
