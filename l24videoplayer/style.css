@@ -44,10 +44,15 @@ body{
 
 .progress{
     width:70%;
+    margin-right:10px;
 }
 
 .fullscreen{
     margin:0 10px;
+}
+
+.closefullscreen{
+    display:none;
 }
 
 .ctrl-btn .fa-play{
@@ -60,6 +65,10 @@ body{
 
 .progress .fullscreen{
     cursor: pointer;
+}
+
+.displaytime{
+    margin-left:10px;
 }
 
 /* 14VD */

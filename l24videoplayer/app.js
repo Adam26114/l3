@@ -8,7 +8,11 @@ const nextbtn = document.getElementById('next');
 const stopbtn = document.getElementById('stop');
 
 const progress = document.getElementById('progress');
+const getdisplaytime = document.getElementById('displaytime')
 const getfullscreen = document.getElementById('fullscreen');
+const getcontainer = document.querySelector('.container');
+const getopnfullscreeen = document.getElementById('opnfullscreen');
+const getclsfullscreen = document.getElementById('clsfullscreen');
 
 const videos = ['simplevideo1','simplevideo2']
 
@@ -52,7 +56,7 @@ function playpausevdo(){
 function nextvdo(){
     curridx++;
 
-    if(curridx > videos.length){
+    if(curridx > videos.length - 1){
         curridx = 0;
     }
 
@@ -66,7 +70,7 @@ function nextvdo(){
 function previousvdo(){
     curridx -= 1 ;
 
-    if(curridx > 0){
+    if(curridx < 0){
         curridx = videos.length - 1;
     }
 
@@ -76,31 +80,87 @@ function previousvdo(){
     playvdo();
 }
 
+function updateprogress(){
+    // console.log('hay');
+    // currentTime came from video api
+    // console.log(getvideoscreen.currentTime);
+    // console.log(getvideoscreen.duration);
+
+    // console.log(getvideoscreen.currentTime / getvideoscreen.duration) * 100;
+
+    progress.value = (getvideoscreen.currentTime / getvideoscreen.duration) * 100;
+
+    let getmin = Math.floor(getvideoscreen.currentTime / 60);
+    // console.log(getmin);
+
+    if(getmin < 10){
+        // getmins = '0'+getmins;
+        getmins = '0'+String(getmins);
+    }
+
+    let getsecs = Math.floor(getvideoscreen.currentTime%60);
+    // console.log(getsecs);
+
+    if(getsecs < 10){
+        // getsecs = '0'+getsecs;
+        getsecs = '0'+String(getsecs)
+    }
+
+    getdisplaytime.innerText = `${getmn}:${getsecs}`;
+}
+
+function setprogress(){
+    console.log('hay');
+}
+
 const getdoce = document.documentElement;
 
 function openfullscreen(){
     if(getdoce.exitFullscreen){
-        getdoce.requestFullscreen();
-    }else if(getdoce.webkitRequestFullscreen){
-        getdoce.webkitRequestFullscreen();
-    }else if(getdoce.msRequestFullscreen){
-        getdoce.msRequestFullscreen();
+        getcontainer.requestFullscreen();//standard w3c
+    }else if(getcontainer.mozRequestFullscreen){
+        getcontainer.mozRequestFullscreen();//standard w3c
+    }else if(getcontainer.webkitRequestFullscreen){
+        getcontainer.webkitRequestFullscreen();//standard w3c
+    }else if(getcontainer.msRequestFullscreen){
+        getcontainer.msRequestFullscreen(); // microsoft pro / id / edge
     }
+
+    getopnfullscreeen.style.display = 'none';
+    getclsfullscreen.style.display = 'inline-block';
 }
 
 function closefullscreen(){
     if(document.exitFullscreen){
-        getdoce.exitFullscreen();
+        document.exitFullscreen(); //standard w3c
     }else if(document.webkitExitFullscreen){
-        getdoce.webkitExitFullscreen();
+        document.webkitExitFullscreen(); //standard w3c
     }else if(document.msExitFullscreen){
-        getdoce.msExitFullscreen();
+        document.msExitFullscreen(); // microsoft pro / id /  edge
     }
+
+    getopnfullscreeen.style.display = 'inline-block';
+    getclsfullscreen.style.display = 'none';
 }
 
-playbtn.addEventListener('click',playvdo);
+function updateprogress(){
+    // console.log('hey');
+    console.log((progress.value*getvideoscreen.duration)/100);
+    getvideoscreen.currentTime =(progress.value*getvideoscreen.duration)/100
+}
+
+playbtn.addEventListener('click',playpausevdo);
 nextbtn.addEventListener('click',nextvdo);
 prevbtn.addEventListener('click',previousvdo);
+
+getvideoscreen.addEventListener('timeupdate',updateprogress)
+progress.addEventListener('click',setprogress);
+
 getfullscreen.addEventListener('click',openfullscreen);
 
 // 20VD
+
+getopnfullscreeen.addEventListener('click',openfullscreen);
+getclsfullscreen.addEventListener('click',closefullscreen)
+
+// 21VDO
