@@ -132,21 +132,34 @@ function updateprogress(e){
 	let getmins = Math.floor(getvideoscreen.currentTime/60);
 	// console.log(getmins);
 
-	if(getmins < 10 ){
-		// getmins = '0'+getmins;
-		getmins = '0'+String(getmins);
-	}
+	// if(getmins < 10 ){
+	// 	// getmins = '0'+getmins;
+	// 	getmins = '0'+String(getmins);
+	// }
 
-	let getsecs = Math.floor(getvideoscreen.currentTime%60);
-	// console.log(getsecs);
+	// let getsecs = Math.floor(getvideoscreen.currentTime%60);
+	// // console.log(getsecs);
 
-	if(getsecs < 10){
-		// getsecs = '0'+getsecs;
-		getsecs = '0'+String(getsecs);
-	}
+	// if(getsecs < 10){
+	// 	// getsecs = '0'+getsecs;
+	// 	getsecs = '0'+String(getsecs);
+	
+	// console.log(getmin,getsec);
+	// console.log(typeof getmin,typeof getsec);
 
-	getdisplaytime.innerText = `${getmins}:${getsecs}`;
+	
+	
+	// getdisplaytime.innerText = `${getmins}:${getsecs}`;
+	
+	//Method 2
+	
+	
+	// Noted : parstStart () must be string data type
+	const
+	
 }
+
+
 
 
 
