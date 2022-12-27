@@ -11,10 +11,13 @@ body{
 }
 
 .container{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    flex-direction: column;
+
+	position: relative;
 }
 
 .videoscreen{
@@ -42,33 +45,70 @@ body{
     cursor: pointer;
 }
 
-.progress{
+/* Start Range  */
+/* .progress{
     width:70%;
-    margin-right:10px;
+    margin-right: 10px;
+} */
+/* End Range  */
+
+/* For progress */
+.progress-container{
+    width: 70%;
+    height: 4px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.progress{
+    width:10%;
+    height: 100%;
+    background-color: steelblue;
+
+    border: 5px;
+    transition: width .1s linear;
+    
 }
 
 .fullscreen{
     margin:0 10px;
 }
 
-.closefullscreen{
-    display:none;
-}
-
 .ctrl-btn .fa-play{
-    color:steelblue;
+    color: steelblue;
 }
 
 .ctrl-btn .fa-stop{
-    color:tomato;
+    color: tomato;
+}
+
+.closefullscreen{
+    display: none;
 }
 
 .progress .fullscreen{
     cursor: pointer;
 }
-
 .displaytime{
-    margin-left:10px;
+    margin-left: 10px;
 }
 
+.pannel{
+	background-color:steelblue;
+	color:#fff;
+	padding:0 30px;
+
+	position: absolute;
+	left:10%;
+	top:80%;
+
+	z-index:-1;
+
+	transition:top .5s ease-out;
+}
+
+.container:hover .pannel{
+	top:100%;
+}
 /* 14VD */
