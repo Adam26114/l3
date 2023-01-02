@@ -2,7 +2,7 @@
 
 const getaudioscreen = document.getElementById('audioscreen');
 const playbtn = document.getElementById('play'),
-      prevbtn = document.getElementById('play'),
+      prevbtn = document.getElementById('prev'),
       nextbtn = document.getElementById('next'),
       stopbtn = document.getElementById('stop');
 
@@ -16,7 +16,7 @@ const audios = ['sample1','sample2','sample3'];
 
 let curridx = 0;
 
-loadaudio(audios[[curridx]]);
+// loadaudio(audios[[curridx]]);
 
 function loadaudio(ado){
     getaudioscreen.src = `./source/${ado}.mp3`;
@@ -38,10 +38,9 @@ function pauseado(){
 
 function playpauseado(){
     if(getaudioscreen.paused){
-        getaudioscreen.play();
+        playado();
     }else{
-        getaudioscreen.pause();
-        
+        pauseado();
     }
 }
 
@@ -65,7 +64,7 @@ function nextado(){
     }
 
     loadaudio(audios[curridx]);
-    pauseado();
+    playado();
 }
 
 function stopado(){
