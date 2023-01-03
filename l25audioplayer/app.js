@@ -83,7 +83,39 @@ function updateprogerss(e){
         const progresspercent= (currentTime/duration)*100;
         progress.style.width = `${progresspercent}%`
     }
+
+    let mins = Math.floor(getaudioscreen.currentTime / 60);
+    let secs = Math.floor(getaudioscreen.currentTime % 60);
+
+    const minuteval = mins.toString().padStart(2,'0');
+    const secondval = secs.toString().padStart(2,'0');
+
+    getdisplaytime.innerText  = `${minuteval}:${secondval}`;
 }
+
+function setaudioprogress(e){
+    const width = this.clientWidth;
+    // console.log(width);
+    const clickx = e.offsetX;
+    // console.log(clickx);
+    const duration = getaudioscreen.duration;
+
+    getaudioscreen.currentTime = (clickx/width) * duration;
+
+}
+
+function volumecontrol(){
+    // console.log(getvolprogres.value);
+
+    //volume came from audio/video api
+    getaudioscreen.volume = getvolprogres.value/100;
+
+
+    // 1 is default (100%)
+    // 0.5  half valumne(50%)
+    // 0 mute (0%)
+}
+
 
 getaudioscreen.addEventListener('timeupdate',updateprogerss);
 getaudioscreen.addEventListener('play',playado);
@@ -93,5 +125,10 @@ playbtn.addEventListener('click',playpauseado);
 prevbtn.addEventListener('click',previousado);
 nextbtn.addEventListener('click',nextado);
 stopbtn.addEventListener('click',stopado);
+
+
+getprogressctn.addEventListener('click',setaudioprogress);
+                            //  click 
+getvolprogres.addEventListener('change',volumecontrol)
 
 // 2AD
