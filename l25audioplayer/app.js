@@ -84,8 +84,14 @@ function updateprogerss(e){
         progress.style.width = `${progresspercent}%`
     }
 
-    let mins = Math.floor(getaudioscreen.currentTime / 60);
-    let secs = Math.floor(getaudioscreen.currentTime % 60);
+    // forward
+    // let mins = Math.floor(getaudioscreen.currentTime / 60);
+    // let secs = Math.floor(getaudioscreen.currentTime % 60);
+
+    // backward
+    let mins = Math.floor((duration - getaudioscreen.currentTime) / 60);
+    let secs = Math.floor((duration - getaudioscreen.currentTime) % 60);
+
 
     const minuteval = mins.toString().padStart(2,'0');
     const secondval = secs.toString().padStart(2,'0');
