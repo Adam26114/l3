@@ -63,8 +63,18 @@ function micmessage(msg){
 
 function getnumber(msg){
     const getnum = +msg;
-    console.log(typeof getnum);
+    // console.log(typeof getnum);
+
+    if(Number.isNaN(getnum)){
+        getvoccnt.innerHTML += `<div>This is not a valid number.</div>`;
+        return false;
+    }
+
+
     getinput.value = getnum;
+
+    // Start Recognition ,start() come from Recognition api
+    getrec.stop();
 }
 
 function setmessage1(msg, color) {
@@ -120,16 +130,25 @@ getbtn.addEventListener('click', function () {
 
             setmessage1(`${guess} is not correct , ${gameleft} guess left`, 'blue');
 
+            
+            if(guess > winningnumber){
+                getvoccnt.innerHTML +=  `<div>You should go down a bit</div>`;
+            }else if(guess < winningnumber){
+                getvoccnt.innerHTML +=  `<div>You should go up a bit</div>`;
+            }
+
         }
     }
 });
 
 
 getgamecnt.addEventListener('mousedown', function (e) {
-    console.log(e.target);
+    // console.log(e.target);
 
     if (e.target.classList.contains('playagain')) {
         window.location.reload();
     }
 });
 
+
+// 18VC
