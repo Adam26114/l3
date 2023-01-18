@@ -14,13 +14,13 @@ const getvoccnt = document.getElementById('voice-container');
 let min = 10,
     max = 100,
     gameleft = 3,
-    winningnumber = 10;
+    winningnumber = randomnum(min,max);
 
 minnum.textContent = min;
 maxnum.textContent = max;
 
 function randomnum(min, max) {
-    let getrdm = Math.random() * (max - min) + 1;
+    let getrdm = Math.floor(Math.random() * (max - min) + 10);
     return getrdm;
 }
 
