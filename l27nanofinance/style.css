@@ -63,3 +63,53 @@ h2{
     padding: 10px;
 }
 
+.open-btn{
+    outline:none;
+}
+h3{
+    border-bottom: 1px solid #aaa;
+    padding-bottom:10px;
+    margin:30px 0 20px;
+}
+
+.form-group{
+    margin: 10px 0;
+}
+
+input[type="number"],input[type="date"]{
+    width:100%;
+    font-size:16px;
+    border:1px solid #ddd;
+    border-radius:3px;
+    outline:0;
+    padding:10px;
+}
+
+#remark{
+    display: block;
+    width:100%;
+    overflow: none;
+    resize:none;
+}
+
+.btn{
+    width:100%;
+    background-color:var(--primary-colr);
+    color:#fff;
+    font-size:16px;
+    box-shadow:0 3px 5px rgba(0,0,0,0.3);
+    border:none;
+    padding:10px;
+    margin:10px 0;
+    cursor:pointer;
+}
+
+.history-box{
+
+}
+
+.list-group{
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
