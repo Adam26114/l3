@@ -50,7 +50,7 @@ h2{
 }
 
 .expense-box > div{
-    flex:1;
+    flex:1;  /*balance */
     text-align:center;
 }
 
