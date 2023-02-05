@@ -201,7 +201,7 @@ getform.addEventListener('submit',newtransaction);
 // 25TR
 
 
-// var myarrs = [10,20,30,40,50,60,70,80,90,100];
+//  var myarrs = [10,20,30,40,50,60,70,80,90,100];
 
 // array.reduce(function(totalvalue,currentValue,currentIdex,array){},initialValue);
 
