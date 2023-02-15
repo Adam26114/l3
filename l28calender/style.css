@@ -27,6 +27,8 @@ body{
     padding:5px 10px;
     cursor: pointer;
 
+    float:left;
+
     transition:background-color .3s;
 }
 
@@ -53,9 +55,20 @@ body{
     left:0;
     /* top:25px; */
 
+    z-index:1;
+
+    display:none;
+
     overflow:hidden;
 }
 
+.clear{
+    clear: both;
+}
+
+.year-btn{
+    float:right;
+}
 
 .dropdown .dropdown-item{
     padding:5px 0;
@@ -70,7 +83,6 @@ body{
     opacity:1;
 }
 
-
 .days .dayname{
     background-color:steelblue;
     color:#fff;
@@ -79,11 +91,33 @@ body{
     font-weight:bold;
 }
 
-.caldays .day{
-    width:30px;
-    border:1px solid #ccc;
-    border-radius:5px;
+.caldates .days .day{
+    width:10%;
+    font-size:18px;
     text-align:center;
+    border-radius:10px;
+    border:1px solid steelblue;
+    padding:3px;
+    margin:3px;
+
+    float:left;
+}
+
+.caldates .days .day .blank{
+    background-color: #fff;
+    border:none;
+}
+
+.caldates .days .day.selected{
+    background-color:green;
+    color: #fff;
+    opacity:.5;
+    cursor: pointer;
+    transition:  opacity .5s;
+}
+
+.caldates .days .day.selected:hover{
+    opacity: 1te;
 }
 
 /* 8CL */
