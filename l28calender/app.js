@@ -94,6 +94,22 @@ function inityears(){
 
         // console.log(newdiv);
 
+        newdiv.onclick = (function(){
+            // console.log(x);
+
+            var allindx = x; 
+            // console.log(alldays); // 2020 to 230
+
+            return function(){
+                year = allindx;
+
+                // console.log(year);
+                getcuryear.innerText = year;
+                initdays();
+            }
+
+        })();
+
         getuiyear.appendChild(newdiv);
     }
 }
@@ -172,3 +188,6 @@ getyearbtn.addEventListener('click',function(){
     }
 
 });
+
+
+// 27CL
