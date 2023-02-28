@@ -98,7 +98,7 @@ function inityears(){
             // console.log(x);
 
             var allindx = x; 
-            // console.log(alldays); // 2020 to 230
+            // console.log(alldays); // 2020 to 2030
 
             return function(){
                 year = allindx;
